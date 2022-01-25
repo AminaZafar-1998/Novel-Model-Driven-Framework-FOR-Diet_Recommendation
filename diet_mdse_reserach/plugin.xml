@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated diet_mdse_reserach -->
+      <package
+            uri="http://www.example.org/diet_mdse_reserach"
+            class="diet_mdse_reserach.Diet_mdse_reserachPackage"
+            genModel="model/diet_mdse_reserach.genmodel"/>
+   </extension>
+
+</plugin>

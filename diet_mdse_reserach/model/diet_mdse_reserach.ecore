@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="diet_mdse_reserach" nsURI="http://www.example.org/diet_mdse_reserach"
+    nsPrefix="diet_mdse_reserach">
+  <eAnnotations source="http://www.eclipse.org/OCL/Import">
+    <details key="ecore" value="http://www.eclipse.org/emf/2002/Ecore"/>
+  </eAnnotations>
+  <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+    <details key="invocationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+    <details key="settingDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+    <details key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="DietRecommendationSystem">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="patient_forbidden_food"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="patient_forbidden_food" value="&#xA;       self.patients.patient_type->includes('Type 2 diabetes') implies self.has_predict_diet_plans.food_name->excludes('fried eggs')"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="patients" upperBound="-1"
+        eType="#//Patient" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nutritionists" upperBound="-1"
+        eType="#//Nutritionist" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="medicines" upperBound="-1"
+        eType="#//Medicine" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="doctors" upperBound="-1"
+        eType="#//Doctor" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="appointments" upperBound="-1"
+        eType="#//Appointment" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="payments" upperBound="-1"
+        eType="#//Payment" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ml_algos" lowerBound="1"
+        upperBound="-1" eType="#//ML_algo" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="has_predict_diet_plans"
+        lowerBound="1" upperBound="-1" eType="#//PredictedDietplan" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="performancemetric" upperBound="-1"
+        eType="#//PerformanceMetric" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="symptoms" upperBound="-1"
+        eType="#//Symptoms" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dataset" upperBound="-1"
+        eType="#//Dataset" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Diet_plan_recommendation"
+        eType="#//DietRecommendationType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Patient">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="height" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="weight" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="bmi" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="activity_level" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="gender" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="patient_type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="glucose" eType="#//Glucose"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="glucose_level" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="payments" upperBound="-1"
+        eType="#//Payment" eOpposite="#//Payment/patient"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="appointments" upperBound="-1"
+        eType="#//Appointment" eOpposite="#//Appointment/patient"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="doctors" upperBound="-1"
+        eType="#//Doctor" eOpposite="#//Doctor/patients"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="medicines" upperBound="-1"
+        eType="#//Medicine"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nutritionists" upperBound="-1"
+        eType="#//Nutritionist" eOpposite="#//Nutritionist/patients"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="age" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="symptoms" upperBound="-1"
+        eType="#//Symptoms"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="other_diseases" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="access_topredicteddietplans"
+        lowerBound="1" upperBound="-1" eType="#//PredictedDietplan"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="DietRecommendationType">
+    <eLiterals name="weight_loss"/>
+    <eLiterals name="weight_gain" value="1"/>
+    <eLiterals name="weight_maintainence" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Glucose">
+    <eLiterals name="fasting"/>
+    <eLiterals name="random" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Nutritionist">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="address" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="phone_no" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="clinictimings" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="patients" upperBound="-1"
+        eType="#//Patient" eOpposite="#//Patient/nutritionists"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fees" upperBound="-1" eType="#//Payment"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="appointments" upperBound="-1"
+        eType="#//Appointment"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="predicteddietplans" lowerBound="1"
+        upperBound="-1" eType="#//PredictedDietplan"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Appointment">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Appointment_details" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Appointment_Date" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="time_taken" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="patient" lowerBound="1"
+        eType="#//Patient" eOpposite="#//Patient/appointments"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="apointment_booking_mode"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="payment" upperBound="-1"
+        eType="#//Payment"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="Money" instanceClassName="java.lang.Integer"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Payment">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Payment_Id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="patient" lowerBound="1"
+        eType="#//Patient" eOpposite="#//Patient/payments"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cardType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cardNo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="paid" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Payment_amount" eType="#//Money"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Doctor">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="address" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="phone_no" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="clinictimings" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="doctor_specailization"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="patients" upperBound="-1"
+        eType="#//Patient" eOpposite="#//Patient/doctors"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="medicines" upperBound="-1"
+        eType="#//Medicine"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fees" upperBound="-1" eType="#//Payment"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="appointments" upperBound="-1"
+        eType="#//Appointment"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="symptoms" upperBound="-1"
+        eType="#//Symptoms"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="access_to_predicteddietplan"
+        lowerBound="1" upperBound="-1" eType="#//PredictedDietplan"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Medicine">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="medicine_name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="medicine_dossage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="datasets" lowerBound="1"
+        upperBound="-1" eType="#//Dataset"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ML_algo" abstract="true">
+    <eOperations name="RandomForest"/>
+    <eOperations name="k_means"/>
+    <eOperations name="svm"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="performancemetrices" upperBound="-1"
+        eType="#//PerformanceMetric"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="generate_diet_plans" lowerBound="1"
+        upperBound="-1" eType="#//PredictedDietplan"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RandomForest" eSuperTypes="#//ML_algo">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="creteria" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PredictedDietplan">
+    <eOperations name="normalize_blood_sugar"/>
+    <eOperations name="weightloss"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="food_name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="K_means" eSuperTypes="#//ML_algo">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="number_Of_Cluster" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Dataset">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="foodcalories" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Food_type" eType="#//FoodType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ml_algos" lowerBound="1"
+        upperBound="-1" eType="#//ML_algo"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SupportVectorMachine" eSuperTypes="#//ML_algo">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Kernel" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="c_value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="gamma_value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Symptoms">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="symptom_name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="severitylevel" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="datasets" lowerBound="1"
+        upperBound="-1" eType="#//Dataset"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PerformanceMetric">
+    <eOperations name="confusionmatrix"/>
+    <eOperations name="accuracy_score"/>
+    <eOperations name="classification_report"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="metrices" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="FoodType">
+    <eLiterals name="Protien"/>
+    <eLiterals name="Carbohydrate" value="1"/>
+  </eClassifiers>
+</ecore:EPackage>

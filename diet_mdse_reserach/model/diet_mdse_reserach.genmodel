@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/diet_mdse_reserach/src-gen" creationIcons="false"
+    editDirectory="/diet_mdse_reserach.edit/src-gen" editorDirectory="/diet_mdse_reserach.editor/src-gen"
+    modelPluginID="diet_mdse_reserach" modelName="Diet_mdse_reserach" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0"
+    copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>diet_mdse_reserach.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="Diet_mdse_reserach" disposableProviderFactory="true" ecorePackage="diet_mdse_reserach.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="diet_mdse_reserach.ecore#//DietRecommendationType">
+      <genEnumLiterals ecoreEnumLiteral="diet_mdse_reserach.ecore#//DietRecommendationType/weight_loss"/>
+      <genEnumLiterals ecoreEnumLiteral="diet_mdse_reserach.ecore#//DietRecommendationType/weight_gain"/>
+      <genEnumLiterals ecoreEnumLiteral="diet_mdse_reserach.ecore#//DietRecommendationType/weight_maintainence"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="diet_mdse_reserach.ecore#//Glucose">
+      <genEnumLiterals ecoreEnumLiteral="diet_mdse_reserach.ecore#//Glucose/fasting"/>
+      <genEnumLiterals ecoreEnumLiteral="diet_mdse_reserach.ecore#//Glucose/random"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="diet_mdse_reserach.ecore#//FoodType">
+      <genEnumLiterals ecoreEnumLiteral="diet_mdse_reserach.ecore#//FoodType/Protien"/>
+      <genEnumLiterals ecoreEnumLiteral="diet_mdse_reserach.ecore#//FoodType/Carbohydrate"/>
+    </genEnums>
+    <genDataTypes ecoreDataType="diet_mdse_reserach.ecore#//Money"/>
+    <genClasses ecoreClass="diet_mdse_reserach.ecore#//DietRecommendationSystem">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference diet_mdse_reserach.ecore#//DietRecommendationSystem/patients"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference diet_mdse_reserach.ecore#//DietRecommendationSystem/nutritionists"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference diet_mdse_reserach.ecore#//DietRecommendationSystem/medicines"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference diet_mdse_reserach.ecore#//DietRecommendationSystem/doctors"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference diet_mdse_reserach.ecore#//DietRecommendationSystem/appointments"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference diet_mdse_reserach.ecore#//DietRecommendationSystem/payments"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference diet_mdse_reserach.ecore#//DietRecommendationSystem/ml_algos"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference diet_mdse_reserach.ecore#//DietRecommendationSystem/has_predict_diet_plans"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference diet_mdse_reserach.ecore#//DietRecommendationSystem/performancemetric"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference diet_mdse_reserach.ecore#//DietRecommendationSystem/symptoms"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference diet_mdse_reserach.ecore#//DietRecommendationSystem/dataset"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diet_mdse_reserach.ecore#//DietRecommendationSystem/Diet_plan_recommendation"/>
+    </genClasses>
+    <genClasses ecoreClass="diet_mdse_reserach.ecore#//Patient">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diet_mdse_reserach.ecore#//Patient/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diet_mdse_reserach.ecore#//Patient/height"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diet_mdse_reserach.ecore#//Patient/weight"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diet_mdse_reserach.ecore#//Patient/bmi"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diet_mdse_reserach.ecore#//Patient/activity_level"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diet_mdse_reserach.ecore#//Patient/gender"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diet_mdse_reserach.ecore#//Patient/patient_type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diet_mdse_reserach.ecore#//Patient/glucose"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diet_mdse_reserach.ecore#//Patient/glucose_level"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference diet_mdse_reserach.ecore#//Patient/payments"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference diet_mdse_reserach.ecore#//Patient/appointments"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference diet_mdse_reserach.ecore#//Patient/doctors"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference diet_mdse_reserach.ecore#//Patient/medicines"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference diet_mdse_reserach.ecore#//Patient/nutritionists"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diet_mdse_reserach.ecore#//Patient/age"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference diet_mdse_reserach.ecore#//Patient/symptoms"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diet_mdse_reserach.ecore#//Patient/other_diseases"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference diet_mdse_reserach.ecore#//Patient/access_topredicteddietplans"/>
+    </genClasses>
+    <genClasses ecoreClass="diet_mdse_reserach.ecore#//Nutritionist">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diet_mdse_reserach.ecore#//Nutritionist/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diet_mdse_reserach.ecore#//Nutritionist/address"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diet_mdse_reserach.ecore#//Nutritionist/phone_no"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diet_mdse_reserach.ecore#//Nutritionist/clinictimings"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference diet_mdse_reserach.ecore#//Nutritionist/patients"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference diet_mdse_reserach.ecore#//Nutritionist/fees"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference diet_mdse_reserach.ecore#//Nutritionist/appointments"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference diet_mdse_reserach.ecore#//Nutritionist/predicteddietplans"/>
+    </genClasses>
+    <genClasses ecoreClass="diet_mdse_reserach.ecore#//Appointment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diet_mdse_reserach.ecore#//Appointment/Appointment_details"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diet_mdse_reserach.ecore#//Appointment/Appointment_Date"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diet_mdse_reserach.ecore#//Appointment/time_taken"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference diet_mdse_reserach.ecore#//Appointment/patient"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diet_mdse_reserach.ecore#//Appointment/apointment_booking_mode"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference diet_mdse_reserach.ecore#//Appointment/payment"/>
+    </genClasses>
+    <genClasses ecoreClass="diet_mdse_reserach.ecore#//Payment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diet_mdse_reserach.ecore#//Payment/Payment_Id"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference diet_mdse_reserach.ecore#//Payment/patient"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diet_mdse_reserach.ecore#//Payment/cardType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diet_mdse_reserach.ecore#//Payment/cardNo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diet_mdse_reserach.ecore#//Payment/paid"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diet_mdse_reserach.ecore#//Payment/Payment_amount"/>
+    </genClasses>
+    <genClasses ecoreClass="diet_mdse_reserach.ecore#//Doctor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diet_mdse_reserach.ecore#//Doctor/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diet_mdse_reserach.ecore#//Doctor/address"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diet_mdse_reserach.ecore#//Doctor/phone_no"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diet_mdse_reserach.ecore#//Doctor/clinictimings"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diet_mdse_reserach.ecore#//Doctor/doctor_specailization"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference diet_mdse_reserach.ecore#//Doctor/patients"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference diet_mdse_reserach.ecore#//Doctor/medicines"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference diet_mdse_reserach.ecore#//Doctor/fees"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference diet_mdse_reserach.ecore#//Doctor/appointments"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference diet_mdse_reserach.ecore#//Doctor/symptoms"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference diet_mdse_reserach.ecore#//Doctor/access_to_predicteddietplan"/>
+    </genClasses>
+    <genClasses ecoreClass="diet_mdse_reserach.ecore#//Medicine">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diet_mdse_reserach.ecore#//Medicine/medicine_name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diet_mdse_reserach.ecore#//Medicine/medicine_dossage"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference diet_mdse_reserach.ecore#//Medicine/datasets"/>
+    </genClasses>
+    <genClasses ecoreClass="diet_mdse_reserach.ecore#//ML_algo">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference diet_mdse_reserach.ecore#//ML_algo/performancemetrices"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diet_mdse_reserach.ecore#//ML_algo/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference diet_mdse_reserach.ecore#//ML_algo/generate_diet_plans"/>
+      <genOperations ecoreOperation="diet_mdse_reserach.ecore#//ML_algo/RandomForest"/>
+      <genOperations ecoreOperation="diet_mdse_reserach.ecore#//ML_algo/k_means"/>
+      <genOperations ecoreOperation="diet_mdse_reserach.ecore#//ML_algo/svm"/>
+    </genClasses>
+    <genClasses ecoreClass="diet_mdse_reserach.ecore#//RandomForest">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diet_mdse_reserach.ecore#//RandomForest/creteria"/>
+    </genClasses>
+    <genClasses ecoreClass="diet_mdse_reserach.ecore#//PredictedDietplan">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diet_mdse_reserach.ecore#//PredictedDietplan/food_name"/>
+      <genOperations ecoreOperation="diet_mdse_reserach.ecore#//PredictedDietplan/normalize_blood_sugar"/>
+      <genOperations ecoreOperation="diet_mdse_reserach.ecore#//PredictedDietplan/weightloss"/>
+    </genClasses>
+    <genClasses ecoreClass="diet_mdse_reserach.ecore#//K_means">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diet_mdse_reserach.ecore#//K_means/number_Of_Cluster"/>
+    </genClasses>
+    <genClasses ecoreClass="diet_mdse_reserach.ecore#//Dataset">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diet_mdse_reserach.ecore#//Dataset/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diet_mdse_reserach.ecore#//Dataset/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diet_mdse_reserach.ecore#//Dataset/foodcalories"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diet_mdse_reserach.ecore#//Dataset/Food_type"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference diet_mdse_reserach.ecore#//Dataset/ml_algos"/>
+    </genClasses>
+    <genClasses ecoreClass="diet_mdse_reserach.ecore#//SupportVectorMachine">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diet_mdse_reserach.ecore#//SupportVectorMachine/Kernel"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diet_mdse_reserach.ecore#//SupportVectorMachine/c_value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diet_mdse_reserach.ecore#//SupportVectorMachine/gamma_value"/>
+    </genClasses>
+    <genClasses ecoreClass="diet_mdse_reserach.ecore#//Symptoms">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diet_mdse_reserach.ecore#//Symptoms/symptom_name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diet_mdse_reserach.ecore#//Symptoms/severitylevel"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference diet_mdse_reserach.ecore#//Symptoms/datasets"/>
+    </genClasses>
+    <genClasses ecoreClass="diet_mdse_reserach.ecore#//PerformanceMetric">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute diet_mdse_reserach.ecore#//PerformanceMetric/metrices"/>
+      <genOperations ecoreOperation="diet_mdse_reserach.ecore#//PerformanceMetric/confusionmatrix"/>
+      <genOperations ecoreOperation="diet_mdse_reserach.ecore#//PerformanceMetric/accuracy_score"/>
+      <genOperations ecoreOperation="diet_mdse_reserach.ecore#//PerformanceMetric/classification_report"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
