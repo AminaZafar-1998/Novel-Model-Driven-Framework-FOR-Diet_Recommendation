@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: diet_mdse_reserach.edit;singleton:=true
+Automatic-Module-Name: diet_mdse_reserach.edit
+Bundle-Version: 1.0.0.qualifier
+Bundle-ClassPath: .
+Bundle-Activator: diet_mdse_reserach.provider.Diet_mdse_reserachEditPlugin$Implementation
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: diet_mdse_reserach.provider
+Require-Bundle: org.eclipse.core.runtime,
+ diet_mdse_reserach;visibility:=reexport,
+ org.eclipse.emf.edit;visibility:=reexport
+Bundle-ActivationPolicy: lazy
