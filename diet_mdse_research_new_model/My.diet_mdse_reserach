@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<diet_mdse_reserach:DietRecommendationSystem xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:diet_mdse_reserach="http://www.example.org/diet_mdse_reserach">
+  <patients name="John" height="176 cm" weight="113 kg" bmi="36 kgm2" activity_level="light" gender="Male" patient_type="Type 2 diabetes" glucose_level="7.2 m/mol" payments="//@payments.0" appointments="//@appointments.0" doctors="//@doctors.0" medicines="//@medicines.2" nutritionists="//@nutritionists.0" age="43" symptoms="//@symptoms.0" access_topredicteddietplans="//@has_predict_diet_plans.0 //@has_predict_diet_plans.2 //@has_predict_diet_plans.3 //@has_predict_diet_plans.1"/>
+  <patients name="Harry" height="170 cm" weight="105 kg" bmi="36.3 kgm2" activity_level="none" gender="Male" patient_type="type 1 diabetes" glucose_level="7.4 m/mol" payments="//@payments.1" appointments="//@appointments.1" doctors="//@doctors.1" medicines="//@medicines.1 //@medicines.0" nutritionists="//@nutritionists.1" age="20" symptoms="//@symptoms.1 //@symptoms.2 //@symptoms.0" access_topredicteddietplans="//@has_predict_diet_plans.0 //@has_predict_diet_plans.2 //@has_predict_diet_plans.3 //@has_predict_diet_plans.1"/>
+  <nutritionists name="Dr. Laura Claray" address="Jinnah town" phone_no="664321325" clinictimings="10 am to 8 pm" patients="//@patients.0" fees="//@payments.0" appointments="//@appointments.0" predicteddietplans="//@has_predict_diet_plans.0 //@has_predict_diet_plans.2 //@has_predict_diet_plans.3 //@has_predict_diet_plans.1"/>
+  <nutritionists name="Dr. Robin Miller" address="Jinnah hospital" phone_no="516217128" clinictimings="10 am to 10 pm" patients="//@patients.1" fees="//@payments.1" appointments="//@appointments.1" predicteddietplans="//@has_predict_diet_plans.0 //@has_predict_diet_plans.2 //@has_predict_diet_plans.3 //@has_predict_diet_plans.1"/>
+  <medicines medicine_name="sulfonylurea" medicine_dossage="100 mg" datasets="//@dataset.0"/>
+  <medicines medicine_name="metformin" medicine_dossage="100 mg" datasets="//@dataset.0"/>
+  <medicines medicine_name="thiazolidinediones" medicine_dossage="100 mg" datasets="//@dataset.0"/>
+  <doctors name="Dr. Samee" address="Jinnah Hospital" phone_no="512912787" clinictimings="10 am to 10pm" doctor_specailization="Endocrinologist" patients="//@patients.0" medicines="//@medicines.0 //@medicines.1" fees="//@payments.0" appointments="//@appointments.0" symptoms="//@symptoms.0" access_to_predicteddietplan="//@has_predict_diet_plans.0 //@has_predict_diet_plans.2 //@has_predict_diet_plans.3 //@has_predict_diet_plans.1"/>
+  <doctors name="Dr. Jeffery" address="Jinnah hospital" phone_no="516272792" clinictimings="10 am to 10pm" doctor_specailization="Endocrinologist" patients="//@patients.1" medicines="//@medicines.2" fees="//@payments.1" appointments="//@appointments.1" symptoms="//@symptoms.1 //@symptoms.2" access_to_predicteddietplan="//@has_predict_diet_plans.0 //@has_predict_diet_plans.2 //@has_predict_diet_plans.3 //@has_predict_diet_plans.1"/>
+  <appointments Appointment_details="scheduled on 6th date" Appointment_Date="0011-07-14T00:00:00.000+0500" time_taken="1 pm" patient="//@patients.0" apointment_booking_mode="On-site" payment="//@payments.0"/>
+  <appointments Appointment_details="scheduled on 7th date" Appointment_Date="0012-07-13T00:00:00.000+0500" time_taken="07-01-2021" patient="//@patients.1" apointment_booking_mode="On-site" payment="//@payments.1"/>
+  <payments Payment_Id="Payoneer" patient="//@patients.0" cardType="Credit card" cardNo="026-781-289" paid="0011-07-14T00:00:00.000+0500" Payment_amount="2500"/>
+  <payments Payment_Id="Payoneer" patient="//@patients.1" cardType="Credit card" cardNo="091-282-722" paid="0012-07-13T00:00:00.000+0500" Payment_amount="2500"/>
+  <ml_algos xsi:type="diet_mdse_reserach:RandomForest" performancemetrices="//@performancemetric.0" name="RandomForest " generate_diet_plans="//@has_predict_diet_plans.0 //@has_predict_diet_plans.2 //@has_predict_diet_plans.3 //@has_predict_diet_plans.1" creteria="Entropy"/>
+  <ml_algos xsi:type="diet_mdse_reserach:K_means" performancemetrices="//@performancemetric.0" name="Clustring" generate_diet_plans="//@has_predict_diet_plans.1 //@has_predict_diet_plans.2 //@has_predict_diet_plans.0" number_Of_Cluster="3"/>
+  <ml_algos xsi:type="diet_mdse_reserach:SupportVectorMachine" performancemetrices="//@performancemetric.0" name="linear SVM" generate_diet_plans="//@has_predict_diet_plans.0 //@has_predict_diet_plans.2 //@has_predict_diet_plans.3" Kernel="linear" c_value="0.8" gamma_value="1"/>
+  <has_predict_diet_plans food_name="Cauliflowers soup"/>
+  <has_predict_diet_plans food_name="fried eggs"/>
+  <has_predict_diet_plans food_name="chickpeas salad"/>
+  <has_predict_diet_plans food_name="cooked redbeans "/>
+  <performancemetric metrices="Model evaluation"/>
+  <symptoms symptom_name="cholesterol" severitylevel="High" datasets="//@dataset.0"/>
+  <symptoms symptom_name="ankle pain" severitylevel="High" datasets="//@dataset.0"/>
+  <symptoms symptom_name=" swelling of feet" severitylevel="High" datasets="//@dataset.0"/>
+  <dataset name="Data_set" type="csv" foodcalories="143 kcal" ml_algos="//@ml_algos.0 //@ml_algos.1"/>
+</diet_mdse_reserach:DietRecommendationSystem>
