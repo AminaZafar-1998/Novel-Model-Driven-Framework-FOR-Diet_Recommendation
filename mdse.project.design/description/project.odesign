@@ -1,0 +1,704 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="mdse-project" version="12.0.0.2017041100">
+  <ownedViewpoints name="Diet" modelFileExtension="diet_mdse_reserach">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Diet Recommendation system" domainClass="diet_mdse_reserach::DietRecommendationSystem" enablePopupBars="true">
+      <metamodel href="http://www.example.org/diet_mdse_reserach#/"/>
+      <defaultLayer name="Default">
+        <nodeMappings name="PatientNode" semanticCandidatesExpression="feature:patients" domainClass="diet_mdse_reserach::Patient">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" resizeKind="NSEW" workspacePath="/mdse.project.design/icons/patient.png">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelFormat>bold</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="DoctorNode" semanticCandidatesExpression="feature:doctors" domainClass="diet_mdse_reserach::Doctor">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" resizeKind="NSEW" workspacePath="/mdse.project.design/icons/Doctor.png">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelFormat>bold</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="NutritionistNode" semanticCandidatesExpression="feature:nutritionists" domainClass="diet_mdse_reserach::Nutritionist">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" resizeKind="NSEW" workspacePath="/mdse.project.design/icons/Nutritionist.png">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelFormat>bold</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="PaymentNode" semanticCandidatesExpression="feature:payments" domainClass="diet_mdse_reserach::Payment">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="feature:Payment_Id" resizeKind="NSEW" workspacePath="/mdse.project.design/icons/Payment.png">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelFormat>bold</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="AppointmentNode" semanticCandidatesExpression="feature:appointments" domainClass="diet_mdse_reserach::Appointment">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="feature:Appointment_details" resizeKind="NSEW" workspacePath="/mdse.project.design/icons/Appointment.png">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelFormat>bold</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="MedicineNode" semanticCandidatesExpression="feature:medicines" domainClass="diet_mdse_reserach::Medicine">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="feature:medicine_name" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/mdse.project.design/icons/Medicine.png">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelFormat>bold</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="RandomForestNode" semanticCandidatesExpression="feature:ml_algos" domainClass="diet_mdse_reserach::RandomForest">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" resizeKind="NSEW" workspacePath="/mdse.project.design/icons/RandomForest.png">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelFormat>bold</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="K-meansNode" semanticCandidatesExpression="feature:ml_algos" domainClass="diet_mdse_reserach::K_means">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/mdse.project.design/icons/K_means.png">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelFormat>bold</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="Linear_SVMNode" semanticCandidatesExpression="feature:ml_algos" domainClass="diet_mdse_reserach::SupportVectorMachine">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/mdse.project.design/icons/SupportVectorMachine.png">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelFormat>bold</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="PredictedDietplanNode" semanticCandidatesExpression="feature:has_predict_diet_plans" domainClass="diet_mdse_reserach::PredictedDietplan">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="feature:food_name" resizeKind="NSEW" workspacePath="/mdse.project.design/icons/PredictedDietplan.png">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelFormat>bold</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="SymptomsNode" semanticCandidatesExpression="feature:symptoms" domainClass="diet_mdse_reserach::Symptoms">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="feature:symptom_name" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/mdse.project.design/icons/Symptoms.png">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelFormat>bold</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="DatasetNode" semanticCandidatesExpression="feature:dataset" domainClass="diet_mdse_reserach::Dataset">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/mdse.project.design/icons/Dataset.png">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelFormat>bold</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="PerformanceMetricNode" semanticCandidatesExpression="feature:performancemetric" domainClass="diet_mdse_reserach::PerformanceMetric">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="feature:metrices" resizeKind="NSEW" workspacePath="/mdse.project.design/icons/PerformanceMetric.png">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelFormat>bold</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="Patient-Doctor" sourceMapping="//@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@nodeMappings[name='PatientNode']" targetMapping="//@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@nodeMappings[name='DoctorNode']" targetFinderExpression="feature:doctors">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="Patient-PredictedDietplan" sourceMapping="//@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@nodeMappings[name='PatientNode']" targetMapping="//@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@nodeMappings[name='PredictedDietplanNode']" targetFinderExpression="feature:access_topredicteddietplans">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="Patient-Nutritiontist" sourceMapping="//@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@nodeMappings[name='PatientNode']" targetMapping="//@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@nodeMappings[name='NutritionistNode']" targetFinderExpression="feature:nutritionists">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="Patient-Medicine" sourceMapping="//@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@nodeMappings[name='PatientNode']" targetMapping="//@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@nodeMappings[name='MedicineNode']" targetFinderExpression="feature:medicines">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="Patient-Payment" sourceMapping="//@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@nodeMappings[name='PatientNode']" targetMapping="//@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@nodeMappings[name='PaymentNode']" targetFinderExpression="feature:payments">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="Patient-Appointment" sourceMapping="//@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@nodeMappings[name='PatientNode']" targetMapping="//@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@nodeMappings[name='AppointmentNode']" targetFinderExpression="feature:appointments">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="Patient-Symptoms" sourceMapping="//@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@nodeMappings[name='PatientNode']" targetMapping="//@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@nodeMappings[name='SymptomsNode']" targetFinderExpression="feature:symptoms">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="Doctor-Medicine" sourceMapping="//@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@nodeMappings[name='DoctorNode']" targetMapping="//@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@nodeMappings[name='MedicineNode']" targetFinderExpression="feature:medicines">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="Doctor-Payment" sourceMapping="//@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@nodeMappings[name='DoctorNode']" targetMapping="//@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@nodeMappings[name='PaymentNode']" targetFinderExpression="feature:fees">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="Doctor-Patient" sourceMapping="//@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@nodeMappings[name='DoctorNode']" targetMapping="//@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@nodeMappings[name='PatientNode']" targetFinderExpression="feature:patients">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="Doctor-PredictedDietplan" sourceMapping="//@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@nodeMappings[name='DoctorNode']" targetMapping="//@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@nodeMappings[name='PredictedDietplanNode']" targetFinderExpression="feature:access_to_predicteddietplan">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="Doctor-Appointment" sourceMapping="//@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@nodeMappings[name='DoctorNode']" targetMapping="//@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@nodeMappings[name='AppointmentNode']" targetFinderExpression="feature:appointments">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="Doctor-Symptoms" sourceMapping="//@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@nodeMappings[name='DoctorNode']" targetMapping="//@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@nodeMappings[name='SymptomsNode']" targetFinderExpression="feature:symptoms">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="Nutritionist-Patient" sourceMapping="//@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@nodeMappings[name='NutritionistNode']" targetMapping="//@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@nodeMappings[name='PatientNode']" targetFinderExpression="feature:patients">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="Nutritionist-Payment" sourceMapping="//@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@nodeMappings[name='NutritionistNode']" targetMapping="//@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@nodeMappings[name='PaymentNode']" targetFinderExpression="feature:fees">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="Nutritionist-PredictedDietplan" sourceMapping="//@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@nodeMappings[name='NutritionistNode']" targetMapping="//@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@nodeMappings[name='PredictedDietplanNode']" targetFinderExpression="feature:predicteddietplans">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="Nutritionist-Appointment" sourceMapping="//@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@nodeMappings[name='NutritionistNode']" targetMapping="//@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@nodeMappings[name='AppointmentNode']" targetFinderExpression="feature:appointments">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="Appointment-Payment" sourceMapping="//@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@nodeMappings[name='AppointmentNode']" targetMapping="//@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@nodeMappings[name='PaymentNode']" targetFinderExpression="feature:payment">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="Appointment-Patient" sourceMapping="//@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@nodeMappings[name='AppointmentNode']" targetMapping="//@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@nodeMappings[name='PatientNode']" targetFinderExpression="feature:patient">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="Symptoms-Dataset" sourceMapping="//@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@nodeMappings[name='SymptomsNode']" targetMapping="//@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@nodeMappings[name='DatasetNode']" targetFinderExpression="feature:datasets">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="ML_Algo-PredictDietPlan" sourceMapping="//@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@nodeMappings[name='RandomForestNode'] //@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@nodeMappings[name='Linear_SVMNode'] //@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@nodeMappings[name='K-meansNode']" targetMapping="//@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@nodeMappings[name='PredictedDietplanNode']" targetFinderExpression="feature:generate_diet_plans">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="ML_Algo-PerformanceMetric" sourceMapping="//@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@nodeMappings[name='RandomForestNode'] //@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@nodeMappings[name='K-meansNode'] //@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@nodeMappings[name='Linear_SVMNode']" targetMapping="//@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@nodeMappings[name='PerformanceMetricNode']" targetFinderExpression="feature:performancemetrices">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="Dataset-ML_Algo" sourceMapping="//@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@nodeMappings[name='DatasetNode']" targetMapping="//@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@nodeMappings[name='RandomForestNode'] //@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@nodeMappings[name='Linear_SVMNode'] //@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@nodeMappings[name='K-meansNode']" targetFinderExpression="feature:ml_algos">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="Medicines-Dataset" sourceMapping="//@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@nodeMappings[name='MedicineNode']" targetMapping="//@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@nodeMappings[name='DatasetNode']" targetFinderExpression="feature:datasets">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <toolSections name="diet">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Create Patient" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@nodeMappings[name='PatientNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="diet_mdse_reserach::Patient" referenceName="patients">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Create Doctor" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@nodeMappings[name='DoctorNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="diet_mdse_reserach::Doctor" referenceName="doctors">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Create Nutritionist" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@nodeMappings[name='NutritionistNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="diet_mdse_reserach::Nutritionist" referenceName="nutritionists">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Create Appointment" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@nodeMappings[name='AppointmentNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="diet_mdse_reserach::Appointment" referenceName="appointments">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="Appointment_details"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Create Medicine" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@nodeMappings[name='MedicineNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="diet_mdse_reserach::Medicine" referenceName="medicines">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="medicine_name"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Create Payment" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@nodeMappings[name='PaymentNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="diet_mdse_reserach::Payment" referenceName="payments">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="Payment_Id"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Random Forest" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@nodeMappings[name='RandomForestNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="diet_mdse_reserach::RandomForest" referenceName="ml_algos">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="K-means" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@nodeMappings[name='K-meansNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="diet_mdse_reserach::K_means" referenceName="ml_algos">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Linear_SVM" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@nodeMappings[name='Linear_SVMNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="diet_mdse_reserach::SupportVectorMachine" referenceName="ml_algos">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Dataset" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@nodeMappings[name='DatasetNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="diet_mdse_reserach::Dataset" referenceName="dataset">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="predictedDietplanNode" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@nodeMappings[name='PredictedDietplanNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="diet_mdse_reserach::PredictedDietplan" referenceName="has_predict_diet_plans">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="food_name"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="SymptomsNode" nodeMappings="//@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@nodeMappings[name='SymptomsNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="diet_mdse_reserach::Symptoms" referenceName="symptoms">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="symptom_name"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="PerformanceMetricNode" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@nodeMappings[name='PerformanceMetricNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="diet_mdse_reserach::PerformanceMetric" referenceName="performancemetric">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="metrices"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Patient-Doctor" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@edgeMappings[name='Patient-Doctor']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="doctors" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Patient-PredictedDietplan" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@edgeMappings[name='Patient-PredictedDietplan']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="access_topredicteddietplans" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Patient-Nutritiontist" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@edgeMappings[name='Patient-Nutritiontist']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="nutritionists" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Patient-Medicine" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@edgeMappings[name='Patient-Medicine']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="medicines" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Patient-Payment" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@edgeMappings[name='Patient-Payment']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="payments" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Patient-Appointment" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@edgeMappings[name='Patient-Appointment']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="appointments" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Patient-Symptoms" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@edgeMappings[name='Patient-Symptoms']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="symptoms" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Doctor-Medicine" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@edgeMappings[name='Doctor-Medicine']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="medicines" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Doctor-Payment" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@edgeMappings[name='Doctor-Payment']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="fees" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Doctor-Patient" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@edgeMappings[name='Doctor-Patient']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="patients" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Doctor-PredictedDietPlan" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@edgeMappings[name='Doctor-PredictedDietplan']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="access_to_predicteddietplan" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Doctor-Appointment" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@edgeMappings[name='Doctor-Appointment']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="appointments" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Doctor-Symptoms" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@edgeMappings[name='Doctor-Symptoms']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="symptoms" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Nutritionist-Patient" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@edgeMappings[name='Nutritionist-Patient']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="patients" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Nutritionist-Payment" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@edgeMappings[name='Nutritionist-Payment']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="fees" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Nutritionist-PredictedDietplan" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@edgeMappings[name='Nutritionist-PredictedDietplan']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="predicteddietplans" valueExpression="feature:predicteddietplans"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Nutritionist-Appointment" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@edgeMappings[name='Nutritionist-Appointment']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="appointments" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Appointment-Payment" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@edgeMappings[name='Appointment-Payment']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="payment" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Appointment-Patient" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@edgeMappings[name='Appointment-Patient']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="patient" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Symptoms-Dataset" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@edgeMappings[name='Symptoms-Dataset']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="datasets"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="ML_Algo-PredictDietPlan" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@edgeMappings[name='ML_Algo-PredictDietPlan']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="generate_diet_plans" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="ML_Algo-PerformanceMetric" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@edgeMappings[name='ML_Algo-PerformanceMetric']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="performancemetrices" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Dataset-ML_Algo" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@edgeMappings[name='Dataset-ML_Algo']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="ml_algos" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Medicines-Dataset" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='Diet']/@ownedRepresentations[name='Diet%20Recommendation%20system']/@defaultLayer/@edgeMappings[name='Medicines-Dataset']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="datasets" valueExpression="var:targetView"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+      <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+    </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="mdse.project.design.Services"/>
+  </ownedViewpoints>
+</description:Group>
