@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated diet_mdse_reserach -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="diet_mdse_reserach.presentation.Diet_mdse_reserachModelWizardID"
+            name="%_UI_Diet_mdse_reserachModelWizard_label"
+            class="diet_mdse_reserach.presentation.Diet_mdse_reserachModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/Diet_mdse_reserachModelFile.gif">
+         <description>%_UI_Diet_mdse_reserachModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated diet_mdse_reserach -->
+      <editor
+            id="diet_mdse_reserach.presentation.Diet_mdse_reserachEditorID"
+            name="%_UI_Diet_mdse_reserachEditor_label"
+            icon="icons/full/obj16/Diet_mdse_reserachModelFile.gif"
+            extensions="diet_mdse_reserach"
+            class="diet_mdse_reserach.presentation.Diet_mdse_reserachEditor"
+            contributorClass="diet_mdse_reserach.presentation.Diet_mdse_reserachActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>
